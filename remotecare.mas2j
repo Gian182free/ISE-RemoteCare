@@ -1,0 +1,8 @@
+MAS remotecare {
+
+    infrastructure: Centralized
+
+    agents:
+        patient_agent patient.asl;
+        caregiver_agent caregiver.asl;
+}
