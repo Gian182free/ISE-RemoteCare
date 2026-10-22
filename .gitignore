@@ -1,0 +1,35 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Kotlin
+.kotlin/
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+
+# IDE
+.idea/
+*.iml
+out/
+
+# File temporanei
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Segreti locali
+.env
+.env.*
+!.env.example
