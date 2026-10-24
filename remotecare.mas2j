@@ -1,10 +1,39 @@
-MAS remotecare {
+/*
+ * RemoteCare - Telehealth & Emergency Multi-Agent System
+ */
 
-    infrastructure: Centralized
+MAS remotecare_system {
+
+    infrastructure: Local
+
+    environment: remotecare.env.RemoteCareEnvironment("seed=2026", "mode=telehealth", "gui");
 
     agents:
-        patient_agent   patient.asl;
-        caregiver_agent caregiver.asl;
+        // Regional Operations & Emergency Command Center
+        control_center_001 control_center.asl;
+
+        // Mobile Emergency Fleet (Regional Response Units)
+        ambulance_101  ambulance.asl;
+        ambulance_102  ambulance.asl;
+
+        // Monitored Telehealth Patients (Chronic & Acute Cases)
+        patient_201 patient.asl;
+        patient_202 patient.asl;
+        patient_203 patient.asl;
+        patient_204 patient.asl;
+
+        // Healthcare Hubs (Regional Care Facilities)
+        hospital_301   hospital.asl;
+        hospital_302   hospital.asl;
+
+        // Tele-Triage Units per Healthcare Hub
+        nurse_hub_401  nurse.asl;
+        nurse_hub_402  nurse.asl;
+
+        // Clinical Specialists and On-Call Practitioners
+        doctor_501   doctor.asl;
+        doctor_502   doctor.asl;
+        doctor_503   doctor.asl;
 
     aslSourcePath: "src/main/asl";
 }
