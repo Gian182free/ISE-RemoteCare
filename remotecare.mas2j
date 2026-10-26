@@ -6,11 +6,11 @@ MAS remotecare_system {
 
     infrastructure: Local
 
-    environment: remotecare.env.RemoteCareEnvironment("seed=2026", "mode=telehealth", "gui");
+    environment: remotecare.env.RemoteCareEnvironment("seed=2026", "mode=telehealth", "gui")
 
     agents:
         // Regional Operations & Emergency Command Center
-        control_center_001 control_center.asl;
+        control_center control_center.asl;
 
         // Mobile Emergency Fleet (Regional Response Units)
         ambulance_101  ambulance.asl;

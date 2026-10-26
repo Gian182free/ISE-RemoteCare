@@ -1,0 +1,25 @@
+package remotecare.model.patient;
+
+public enum RiskLevel {
+    RED(2),
+    YELLOW(1),
+    GREEN(0),
+
+    private final int risk;
+
+    RiskLevel(final int risk) {
+        this.risk = risk;
+    }
+
+    public int risk() {
+        return risk;
+    }
+
+    public String atom() {
+        return name().toLowerCase();
+    }
+
+    public static RiskLevel fromAtom(final String atom) {
+        return valueOf(atom.toUpperCase());
+    }
+}
