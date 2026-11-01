@@ -17,4 +17,14 @@ public record Position(int x, int y) {
         int dy = this.y - other.y;
         return Math.sqrt(dx * dx + dy * dy);
     }
+
+    /**
+     * Calculates the Manhattan distance between this position and another target position.
+     * 
+     * @param other The other position to measure distance to
+     * @return The Manhattan distance as an integer value
+     */
+    public int manhattanDistanceTo(Position other) {
+        return Math.abs(this.x - other.x) + Math.abs(this.y - other.y);
+    }
 }
